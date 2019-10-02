@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+
+<html>
+<head>
+<title> Natural Breed </title>
+
+<script type="text/javascript">
+var naturalbreed = ["siberian", "kurilianbobtail"];
+
+function isnatural()
+{
+   var i;
+   var natural = false;
+   breed = document.getElementById("selection").value
+   for(i = 0;i < naturalbreed.length; i++)
+   {
+       console.log(naturalbreed[i])
+       if(naturalbreed[i] == breed)
+       {
+           natural = true;
+           alert("This is a natural breed.")
+           break;
+       }
+       
+   }
+   if(!natural)
+   {
+        alert("This is NOT a natural breed.")
+   }
+}
+</script>
+
+</head>
+
+<body>
+
+<h3> Is your cat a natural breed? </h3>
+
+ <select id="selection">
+    <option value="mainecoon">Maine Coon</option>
+    <option value="persian">Persian</option>
+    <option value="kurilianbobtail">Kurilian Bobtail</option>
+    <option value="siamese">Siamese</option>
+    <option value="norwegian">Norwegian Forestcat</option>
+    <option value="siberian">Siberian Cat</option>
+    <option value="sphinx">Sphinx</option>
+    <option value="britishshorthair">British Shorthair</option>
+    <option value="britishlonghair">British Longhair</option>
+    <option value="bengal">Bengal</option>
+</select>
+<button type="button" onClick="isnatural()">Is this breed a natural breed?</button>
+
+</body>
+</html>
